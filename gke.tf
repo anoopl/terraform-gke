@@ -16,7 +16,7 @@ resource "google_container_cluster" "kubernetes" {
   private_cluster_config {
     enable_private_nodes = "true"
     master_ipv4_cidr_block = "${var.master_cidr}"
-    #enable_private_endpoint = "true"
+    enable_private_endpoint = "true"
   }
   master_authorized_networks_config  {
     cidr_blocks {
